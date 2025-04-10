@@ -6,13 +6,15 @@ import styles from "./App.module.css";
 export default function App() {
   return (
     <div className={styles.container}>
-      <h1>Phonebook</h1>
-      <div className={styles.form}>
-        <ContactForm />
-      </div>
-      <SearchBox />
-      <div className={styles.contactsContainer}>
-        <ContactList />
+      <div className={styles.wrapper}>
+        <h1>Phonebook</h1>
+        <div className={styles.form}>
+          <ContactForm />
+        </div>
+        <SearchBox />
+        <div className={styles.contactsContainer}>
+          <ContactList />
+        </div>
       </div>
     </div>
   );

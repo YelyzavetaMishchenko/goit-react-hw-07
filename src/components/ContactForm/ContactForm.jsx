@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsOps";
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ export default function ContactForm() {
     e.preventDefault();
     if (!name || !number) return;
 
-    dispatch(addContact(name, number));
+    dispatch(addContact({ name, number }));
     setName("");
     setNumber("");
   };
